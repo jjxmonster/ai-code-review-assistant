@@ -16,20 +16,24 @@ To get your local environment set up and running, follow these simple steps:
 
 1.  **Clone the repository:**
 
-git clone https://github.com/jjxmonster/ai-code-review-assistant
+```
+  git clone https://github.com/jjxmonster/ai-code-review-assistant
+```
 
 2.  **Install dependencies:**
 
 Navigate to the project directory and run:
 
-bun install
+```
+  bun install
+```
 
 3.  **Set up your `.env` file:**
 
 Create a `.env` file in the root of your project and add your OpenAI API key:
 
 ```
-    VITE_OPENAI_API_KEY=your_openai_api_key_here
+  VITE_OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 Replace `your_openai_api_key_here` with your actual OpenAI API key.
