@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# AI Code Review Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **AI Code Review Assistant**, the next step in automating your coding review process. Powered by the cutting-edge technologies of OpenAI API and LangChain, this application leverages the best in AI to streamline code reviews, making them more efficient and insightful.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Automated Code Reviews:** Get instant feedback on your code's quality, style, and potential bugs.
 
-## Expanding the ESLint configuration
+- **Powered by OpenAI and LangChain:** Utilizes advanced AI models for in-depth analysis.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Built with Vite + React:** A modern, fast, and powerful web development setup.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get your local environment set up and running, follow these simple steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1.  **Clone the repository:**
+
+git clone https://github.com/jjxmonster/ai-code-review-assistant
+
+2.  **Install dependencies:**
+
+Navigate to the project directory and run:
+
+bun install
+
+3.  **Set up your `.env` file:**
+
+Create a `.env` file in the root of your project and add your OpenAI API key:
+
+VITE_OPENAI_API_KEY=your_openai_api_key_here
+
+Replace `your_openai_api_key_here` with your actual OpenAI API key.
