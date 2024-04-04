@@ -6,6 +6,8 @@ import { systemMessage } from "./utils";
 export const getCodeReview = async () => {
 	const { code, setModelAnswer } = useAppStore.getState();
 
+	setModelAnswer("");
+
 	const chat = new ChatOpenAI({
 		openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY,
 		streaming: true,
