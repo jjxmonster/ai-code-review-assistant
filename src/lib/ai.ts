@@ -7,7 +7,7 @@ export const getCodeReview = async () => {
 	const { code, setModelAnswer } = useAppStore.getState();
 
 	const chat = new ChatOpenAI({
-		openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY as string,
+		openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY,
 		streaming: true,
 		maxTokens: 500,
 		temperature: 0.5,
