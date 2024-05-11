@@ -22,7 +22,7 @@ export const getCodeReview = async () => {
 		modelName: "gpt-3.5-turbo",
 		openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY,
 	});
-	const guardPrompt = `Return 1 or 0 if the code: {code} is a valid code snippet`;
+	const guardPrompt = `Return 1 or 0 if the code: {code} is a valid typescript/javascript code snippet`;
 	const prompt = PromptTemplate.fromTemplate(guardPrompt);
 	const chain = new LLMChain({ llm: guardRail, prompt });
 	const { text } = await chain.call({

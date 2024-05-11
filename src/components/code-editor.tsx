@@ -1,7 +1,18 @@
 "use client";
 import { useAppStore } from "@/store/store";
-import { Editor } from "@monaco-editor/react";
+import { Editor, Monaco } from "@monaco-editor/react";
 import { Card } from "./ui/card";
+
+const handleEditorWillMount = (monaco: Monaco) => {
+	monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
+		noSemanticValidation: true,
+		noSyntaxValidation: true,
+	});
+
+	monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+		noResolve: true,
+	});
+};
 
 export const CodeEditor = () => {
 	const { code, setCode } = useAppStore();
@@ -12,6 +23,7 @@ export const CodeEditor = () => {
 				theme="vs-dark"
 				defaultValue={code}
 				onChange={value => setCode(value!)}
+				beforeMount={handleEditorWillMount}
 			/>
 		</Card>
 	);
